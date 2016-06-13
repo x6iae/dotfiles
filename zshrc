@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/Sunday/.oh-my-zsh
 
-#only for paw
-export MAILGUN_API_KEY=key-1eb438e33194d3187551a4e53df5ba85
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
