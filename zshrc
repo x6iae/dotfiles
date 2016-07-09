@@ -56,10 +56,6 @@ source $ZSH/oh-my-zsh.sh
 
 source "$HOME/.antigen/antigen.zsh"
 
-antigen-use oh-my-zsh
-antigen-bundle arialdomartini/oh-my-git
-antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
-
 antigen-apply
 
 # You may need to manually set your language environment

@@ -10,7 +10,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources gemrc rvmrc"    # list of files/folders to symlink in homedir
+files="bashrc vimrc zshrc oh-my-zsh rvmrc gemrc"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -64,5 +64,13 @@ else
 fi
 }
 
-install_zsh
+install_vundle() {
+    # Test to see if vundle is un-available and install 
+    if [[ ! -d ~/.vim/bundle/ ]]; then
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    fi
+    vim +PluginInstall +qall
+}
 
+install_zsh
+install_vundle
