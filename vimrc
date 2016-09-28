@@ -41,6 +41,7 @@ set hlsearch
 set background=dark
 set number
 set ic
+set pastetoggle=<F2>
 
 " size of a hard tabstop
 set tabstop=2
