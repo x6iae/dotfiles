@@ -10,7 +10,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc zshrc oh-my-zsh rvmrc gemrc"    # list of files/folders to symlink in homedir
+files="bashrc vimrc zshrc rvmrc gemrc gitignore_global"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -72,5 +72,8 @@ install_vundle() {
     vim +PluginInstall +qall
 }
 
-install_zsh
+#link global gitignore
+git config --global core.excludesfile '~/.gitignore_global'
+
+install_zsh #todo this didn't work the last time... need to look into it
 install_vundle
