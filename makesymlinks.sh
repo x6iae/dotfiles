@@ -72,8 +72,10 @@ install_vundle() {
     vim +PluginInstall +qall
 }
 
-#link global gitignore
+# link global gitignore
 git config --global core.excludesfile '~/.gitignore_global'
+# add sublime to command to terminal
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 install_zsh #todo this didn't work the last time... need to look into it
 install_vundle
