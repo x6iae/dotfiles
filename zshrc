@@ -82,14 +82,9 @@ alias wo="cd ~/workspace/open-source"
 alias wa="cd ~/workspace/accureTech"
 alias wc="cd ~/workspace/contributions"
 alias wsx="cd ~/workspace/sandbox"
-alias wi="cd ~/workspace/ibm_bdu"
-alias wia="cd ~/workspace/ibm_bdu/ambassadors"
-
-alias zc="cd ~/workspace/accureTech/zerocap"
-alias ik="cd ~/workspace/TRG/ikeora"
-alias ab="cd ~/workspace/accureTech/abayas"
 alias la="cd ~/workspace/personal/learning_algorithms"
 alias cg="cd ~/workspace/personal/cGuides"
+alias tdev="cd ~/workspace/transfixio/transfix-dev-box"
 
 # Git aliases
 alias gs='git status '
@@ -107,3 +102,6 @@ alias get='git '
 alias vi='vi -p'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# added by travis gem
+[ -f /Users/sunday/.travis/travis.sh ] && source /Users/sunday/.travis/travis.sh

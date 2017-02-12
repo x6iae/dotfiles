@@ -74,6 +74,7 @@ install_vundle() {
 
 # link global gitignore
 git config --global core.excludesfile '~/.gitignore_global'
+git config --global core.editor /usr/bin/vim
 # add sublime to command to terminal
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
