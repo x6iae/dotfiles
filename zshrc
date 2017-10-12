@@ -13,8 +13,11 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# How often to auto-update (in days).
+export UPDATE_ZSH_DAYS=1
+
+# Define java home for intellij?
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -74,16 +77,12 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias sv="cd ~/workspace/shelves"
 alias home="cd ~"
 alias ws="cd ~/workspace"
 alias wp="cd ~/workspace/personal"
 alias wo="cd ~/workspace/open-source"
-alias wa="cd ~/workspace/accureTech"
-alias wc="cd ~/workspace/contributions"
 alias wsx="cd ~/workspace/sandbox"
 alias la="cd ~/workspace/personal/learning_algorithms"
-alias cg="cd ~/workspace/personal/cGuides"
 alias tdev="cd ~/workspace/transfixio/transfix-dev-box"
 
 # Git aliases
@@ -102,6 +101,13 @@ alias get='git '
 alias vi='vi -p'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/anaconda3/bin" # Add anaconda to PATH
 
-# added by travis gem
+### Added by the Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
+
 [ -f /Users/sunday/.travis/travis.sh ] && source /Users/sunday/.travis/travis.sh
+
+autoload -U compinit && compinit
+autoload -U bashcompinit && bashcompinit
+source $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh
