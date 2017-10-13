@@ -107,6 +107,7 @@ CASKS=(
     google-chrome
     google-backup-and-sync
     gpgtools
+    hackhands
     iterm2
     java
     macvim
