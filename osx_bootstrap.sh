@@ -112,6 +112,7 @@ CASKS=(
     java
     macvim
     rubymine
+    screenhero
     skype
     slack
     spotify
