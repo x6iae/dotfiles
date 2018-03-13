@@ -102,6 +102,8 @@ echo "##########----> Setting up cask..."
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 CASKS=(
+    db-browser-for-sqlite
+    deezer
     dropbox
     firefox
     google-chrome

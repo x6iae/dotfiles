@@ -68,22 +68,15 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-#eval "$(docker-machine env default)"
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
 alias home="cd ~"
 alias ws="cd ~/workspace"
 alias wp="cd ~/workspace/personal"
 alias wo="cd ~/workspace/open-source"
 alias wsx="cd ~/workspace/sandbox"
-alias la="cd ~/workspace/personal/learning_algorithms"
+alias wc="cd ~/workspace/cahootify/cahootify"
+alias wca="cd ~/workspace/cahootify/acts_as_mergeable"
 alias tdev="cd ~/workspace/transfixio/transfix-dev-box"
+alias wf="cd ~/workspace/frintern"
 
 # Git aliases
 alias gs='git status '
@@ -101,7 +94,6 @@ alias get='git '
 alias vi='vi -p'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/anaconda3/bin" # Add anaconda to PATH
 
 ### Added by the Bluemix CLI
 source /usr/local/Bluemix/bx/zsh_autocomplete
