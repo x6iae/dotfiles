@@ -87,11 +87,13 @@ alias gd='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
-
 alias got='git '
 alias get='git '
 
 alias vi='vi -p'
+
+# make pyenv available (already installed via brew-cask in osx_bootstrap.sh)
+eval "$(pyenv init -)"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 

@@ -73,8 +73,7 @@ PACKAGES=(
     npm
     pkg-config
     postgresql
-    python
-    python3
+    pyenv
     rabbitmq
     readline
     rename
@@ -85,6 +84,7 @@ PACKAGES=(
     vim
     wget
     xz
+    zlib
     zsh
     zsh-completions
 )
