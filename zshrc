@@ -107,4 +107,8 @@ autoload -U bashcompinit && bashcompinit
 
 # export tokens and credentials to environment
 source ~/dotfiles/env_vars.sh
+# source local functions
+source ~/dotfiles/functions.sh
+
 source $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh
+export PATH="/usr/local/sbin:$PATH"

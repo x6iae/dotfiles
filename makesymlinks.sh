@@ -65,7 +65,7 @@ fi
 }
 
 install_vundle() {
-    # Test to see if vundle is un-available and install 
+    # Test to see if vundle is un-available and install
     if [[ ! -d ~/.vim/bundle/ ]]; then
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     fi
