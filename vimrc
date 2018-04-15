@@ -38,20 +38,17 @@ filetype plugin indent on
 
 syntax on
 set hlsearch
+set incsearch
 set background=dark
 set number
 set ic
 set pastetoggle=<F2>
 
-" size of a hard tabstop
-set tabstop=2
-
-" size of an "indent"
+" indentation settings
+" only interested in spaces (and not tabs) for my indentations
+set expandtab
 set shiftwidth=2
-
-" a combination of spaces and tabs are used to simulate tab stops at a width
-" other than the (hard)tabstop
-"set softtabstop=2
+set softtabstop=2
 
 noremap ; :
 noremap <C-l> gt

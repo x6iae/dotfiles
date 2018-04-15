@@ -68,15 +68,8 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-alias home="cd ~"
-alias ws="cd ~/workspace"
-alias wp="cd ~/workspace/personal"
-alias wo="cd ~/workspace/open-source"
-alias wsx="cd ~/workspace/sandbox"
-alias wc="cd ~/workspace/cahootify/cahootify"
-alias wca="cd ~/workspace/cahootify/acts_as_mergeable"
-alias tdev="cd ~/workspace/transfixio/transfix-dev-box"
-alias wf="cd ~/workspace/frintern"
+# Add projects to cdpath
+export CDPATH=$CDPATH:~/workspace/transfixio:~/workspace/cahootify:~/workspace/personal:~/workspace/frintern
 
 # Git aliases
 alias gs='git status '
@@ -91,7 +84,7 @@ alias got='git '
 alias get='git '
 
 alias vi='vi -p'
-
+alias home='cd ~'
 # make pyenv available (already installed via brew-cask in osx_bootstrap.sh)
 eval "$(pyenv init -)"
 
