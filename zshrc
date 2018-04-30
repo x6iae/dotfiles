@@ -69,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # Add projects to cdpath
-export CDPATH=$CDPATH:~/workspace/transfixio:~/workspace/cahootify:~/workspace/personal:~/workspace/frintern
+export CDPATH=$CDPATH:~/workspace/transfixio:~/workspace/cahootify:~/workspace/personal:~/workspace/frintern:~/workspace/bitcamp
 
 # Git aliases
 alias gs='git status '
@@ -89,6 +89,7 @@ alias home='cd ~'
 eval "$(pyenv init -)"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.npm-packages/bin:$PATH" ### Added by the Bluemix CLI
 
 ### Added by the Bluemix CLI
 source /usr/local/Bluemix/bx/zsh_autocomplete
