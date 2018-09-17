@@ -56,6 +56,7 @@ brew install bash
 PACKAGES=(
     ack
     awscli
+    awsebcli
     aws-elasticbeanstalk
     autoconf
     automake
