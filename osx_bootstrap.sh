@@ -104,17 +104,14 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 CASKS=(
     db-browser-for-sqlite
-    deezer
     dropbox
     firefox
     google-chrome
     google-backup-and-sync
     gpgtools
-    hackhands
     iterm2
     java
     macvim
-    rubymine
     screenhero
     skype
     slack
@@ -122,7 +119,6 @@ CASKS=(
     spotify-notifications
     vagrant
     virtualbox
-    vlc
     whatsapp
 )
 
