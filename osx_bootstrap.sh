@@ -80,7 +80,6 @@ PACKAGES=(
     rename
     terminal-notifier
     the_silver_searcher
-    tmux
     tree
     vim
     wget
@@ -109,10 +108,8 @@ CASKS=(
     google-chrome
     google-backup-and-sync
     gpgtools
-    iterm2
     java
     macvim
-    screenhero
     skype
     slack
     spotify
