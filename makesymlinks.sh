@@ -78,5 +78,5 @@ git config --global core.editor /usr/bin/vim
 # add sublime to command to terminal
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
-install_zsh #todo this didn't work the last time... need to look into it
+#install_zsh #todo this didn't work the last time... need to look into it
 install_vundle

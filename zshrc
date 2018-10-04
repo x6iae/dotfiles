@@ -41,14 +41,14 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  osx
+)
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -92,18 +92,15 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$HOME/.npm-packages/bin:$PATH" ### Added by the Bluemix CLI
 export PATH="~/Library/Python/2.7/bin:$PATH"
 
-### Added by the Bluemix CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete
-
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
 
 # export tokens and credentials to environment
-source ~/dotfiles/env_vars.sh
+[ -f ~/dotfiles/env_vars.sh ] && source ~/dotfiles/env_vars.sh
 # source local functions
 source ~/dotfiles/functions.sh
 
-source $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh
+[ -f $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh ] && source $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh
 export PATH="/usr/local/sbin:$PATH"
