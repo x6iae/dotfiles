@@ -167,7 +167,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 echo "##########----> Creating folder structure..."
-[[ ! -d Wiki ]] && mkdir Wiki
-[[ ! -d workspace ]] && mkdir workspace
+[[ ! -d $HOME/Wiki ]] && mkdir $HOME/Wiki
+[[ ! -d $HOME/workspace ]] && mkdir $HOME/workspace
 
 echo "##########----> Bootstrapping complete"
