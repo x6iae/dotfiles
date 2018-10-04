@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Sunday/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -95,7 +95,7 @@ export PATH="~/Library/Python/2.7/bin:$PATH"
 ### Added by the Bluemix CLI
 source /usr/local/Bluemix/bx/zsh_autocomplete
 
-[ -f /Users/sunday/.travis/travis.sh ] && source /Users/sunday/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
