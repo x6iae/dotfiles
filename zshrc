@@ -92,18 +92,15 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$HOME/.npm-packages/bin:$PATH" ### Added by the Bluemix CLI
 export PATH="~/Library/Python/2.7/bin:$PATH"
 
-### Added by the Bluemix CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete
-
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
 
 # export tokens and credentials to environment
-source ~/dotfiles/env_vars.sh
+[ -f ~/dotfiles/env_vars.sh ] $$ source ~/dotfiles/env_vars.sh
 # source local functions
-source ~/dotfiles/functions.sh
+[ -f ~/dotfiles/functions.sh ] && source ~/dotfiles/functions.sh
 
 source $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh
 export PATH="/usr/local/sbin:$PATH"
