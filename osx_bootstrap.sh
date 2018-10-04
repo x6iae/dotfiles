@@ -39,7 +39,6 @@ fi
 brew update
 
 # Install GNU core utilities (those that come with OS X are outdated)
-brew tap homebrew/dupes
 brew install coreutils
 brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
