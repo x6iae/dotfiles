@@ -106,7 +106,6 @@ CASKS=(
     firefox
     google-chrome
     google-backup-and-sync
-    gpgtools
     java
     macvim
     skype
