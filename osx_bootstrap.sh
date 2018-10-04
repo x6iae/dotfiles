@@ -150,6 +150,8 @@ echo "##########----> Installing global npm packages..."
 npm install marked -g
 
 echo "##########----> Configuring OSX..."
+echo "##########----> Installing OhMyZsh..."
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # Set fast key repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
