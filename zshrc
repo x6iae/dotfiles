@@ -69,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # Add projects to cdpath
-export CDPATH=$CDPATH:~/workspace/transfixio:~/workspace/cahootify:~/workspace/personal:~/workspace/frintern:~/workspace/bitcamp:~/workspace/Downsideupmedia
+export CDPATH=$CDPATH:~/workspace
 
 # Git aliases
 alias gs='git status '

@@ -4,7 +4,7 @@ This repository contains my custom dotfiles for safekeeping and easy duplication
 
 ## installation
 
- 1. Clone repo into home directory: `$ cd ~`, `$ git clone git@github.com:SundayAdefila/dotfiles.git`
+ 1. Clone repo into home directory: `$ cd ~`, `$ git clone git@github.com:x6iae/dotfiles.git`
  2. Enter the dotfiles directory: `$ cd dotfiles`
  3. Make the `setup.sh` file executable: `$ chmod +x setup.sh`
  4. Make the `osx_bootstrap.sh` file executable: `$ chmod +x osx_bootstrap.sh`
