@@ -107,7 +107,9 @@ CASKS=(
     google-chrome
     google-backup-and-sync
     java
+    libreoffice
     macvim
+    postman
     skype
     slack
     spotify
