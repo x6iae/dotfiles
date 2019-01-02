@@ -69,7 +69,6 @@ PACKAGES=(
     libjpeg
     markdown
     memcached
-    node
     npm
     pkg-config
     postgresql
@@ -110,6 +109,7 @@ CASKS=(
     libreoffice
     macvim
     postman
+    skitch
     skype
     slack
     spotify
