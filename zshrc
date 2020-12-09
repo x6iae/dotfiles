@@ -106,6 +106,8 @@ autoload -U bashcompinit && bashcompinit
 
 # export tokens and credentials to environment
 [ -f ~/dotfiles/env_vars.sh ] && source ~/dotfiles/env_vars.sh
+# export work(transfix) tokens and credentials to environment
+[ -f ~/dotfiles/transfix/env_vars.sh ] && source ~/dotfiles/transfix/env_vars.sh
 # source local functions
 [ -f ~/dotfiles/functions.sh ] && source ~/dotfiles/functions.sh
 

@@ -16,6 +16,7 @@ files="bashrc vimrc zshrc rvmrc gemrc gitignore_global gitconfig"    # list of f
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
+[ -d $olddir ] && rm -rf $olddir
 mkdir -p $olddir
 echo "done"
 

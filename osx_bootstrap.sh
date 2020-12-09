@@ -39,7 +39,6 @@ fi
 brew update
 
 PACKAGES=(
-    ag
     awscli
     awsebcli
     aws-elasticbeanstalk
@@ -58,6 +57,7 @@ PACKAGES=(
     pkg-config
     postgresql
     pyenv
+    the_silver_searcher
     vim
     wget
     zlib
