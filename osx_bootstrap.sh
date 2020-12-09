@@ -32,37 +32,22 @@ echo "##########----> Starting bootstrapping"
 # Check for Homebrew, install if we don't have it
 if test ! $(which brew); then
     echo "##########----> Installing homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 # Update homebrew recipes
 brew update
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-indent --with-default-names
-brew install gnu-which --with-default-names
-brew install gnu-grep --with-default-names
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-brew install bash
-
 PACKAGES=(
-    ack
+    ag
     awscli
     awsebcli
     aws-elasticbeanstalk
     autoconf
     automake
     ffmpeg
-    gettext
+    findutils
     git
-    heroku
     hub
     imagemagick
     jq
@@ -73,15 +58,8 @@ PACKAGES=(
     pkg-config
     postgresql
     pyenv
-    rabbitmq
-    readline
-    rename
-    terminal-notifier
-    the_silver_searcher
-    tree
     vim
     wget
-    xz
     zlib
     zsh
     zsh-completions
@@ -93,43 +71,31 @@ brew install ${PACKAGES[@]}
 echo "##########----> Cleaning up..."
 brew cleanup
 
-echo "##########----> Installing cask..."
-brew install caskroom/cask/brew-cask
-
 echo "##########----> Setting up cask..."
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+
+## NOTE: virtualbox may fail as it'll require macos permissions under security & privacy
 CASKS=(
-    db-browser-for-sqlite
-    dropbox
-    firefox
     google-chrome
-    google-backup-and-sync
-    java
     libreoffice
-    macvim
     postman
     skitch
-    skype
     slack
-    spotify
-    spotify-notifications
-    vagrant
     virtualbox
     whatsapp
 )
 
 echo "##########----> Installing cask apps..."
-brew cask install ${CASKS[@]}
+brew install --cask ${CASKS[@]}
 
 echo "##########----> Installing fonts..."
-brew tap caskroom/fonts
+brew tap homebrew/cask-cask-fonts
 FONTS=(
-    font-inconsolidata
     font-roboto
     font-clear-sans
 )
-brew cask install ${FONTS[@]}
+brew install --cask ${FONTS[@]}
 
 echo "##########----> Installing Python packages..."
 PYTHON_PACKAGES=(
@@ -142,20 +108,14 @@ sudo pip install ${PYTHON_PACKAGES[@]}
 echo "##########----> Installing Ruby gems..."
 RUBY_GEMS=(
     bundler
-    filewatcher
-    cocoapods
 )
 sudo gem install ${RUBY_GEMS[@]}
 
 echo "##########----> Installing global npm packages..."
 npm install marked -g
 
-echo "##########----> Configuring OSX..."
 echo "##########----> Installing OhMyZsh..."
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-# Set fast key repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Require password as soon as screensaver or sleep mode starts
 defaults write com.apple.screensaver askForPassword -int 1
@@ -164,12 +124,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Show filename extensions by default
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Enable tap-to-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
 echo "##########----> Creating folder structure..."
-[[ ! -d $HOME/Wiki ]] && mkdir $HOME/Wiki
 [[ ! -d $HOME/workspace ]] && mkdir $HOME/workspace
 
 echo "##########----> Bootstrapping complete"

@@ -94,7 +94,14 @@ export PATH="~/Library/Python/2.7/bin:$PATH"
 
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-autoload -U compinit && compinit
+# To make Homebrew’s completions available in zsh, you must get the Homebrew-managed zsh site-functions on your FPATH before initialising zsh’s completion facility
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
 autoload -U bashcompinit && bashcompinit
 
 # export tokens and credentials to environment
