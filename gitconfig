@@ -1,0 +1,10 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = /usr/bin/vim
+[user]
+	email = adefilaedward@gmail.com
+        name = Sunday Adefila
+[pull]
+        rebase = false
+[includeIf "gitdir:~/workspace/"]
+        path = ~/.gitconfig-transfix

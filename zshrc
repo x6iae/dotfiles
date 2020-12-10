@@ -113,3 +113,4 @@ autoload -U bashcompinit && bashcompinit
 
 [ -f $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh ] && source $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh
 export PATH="/usr/local/sbin:$PATH"
+export PATH=$PATH:${TRANSFIX_HOME}/transfix-compose/scripts

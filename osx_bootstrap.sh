@@ -57,6 +57,7 @@ PACKAGES=(
     pkg-config
     postgresql
     pyenv
+    python3
     the_silver_searcher
     vim
     wget
@@ -79,6 +80,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 CASKS=(
     google-chrome
     libreoffice
+    macdown
     postman
     skitch
     slack
