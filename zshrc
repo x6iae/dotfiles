@@ -99,18 +99,18 @@ export PATH="~/Library/Python/2.7/bin:$PATH"
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
-  autoload -Uz compinit
+  autoload -U compinit
   compinit
 fi
 autoload -U bashcompinit && bashcompinit
 
-# export tokens and credentials to environment
-[ -f ~/dotfiles/env_vars.sh ] && source ~/dotfiles/env_vars.sh
-# export work(transfix) tokens and credentials to environment
-[ -f ~/dotfiles/transfix/env_vars.sh ] && source ~/dotfiles/transfix/env_vars.sh
 # source local functions
 [ -f ~/dotfiles/functions.sh ] && source ~/dotfiles/functions.sh
-
-[ -f $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh ] && source $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh
+# export tokens and credentials to environment
+[ -f ~/dotfiles/env_vars.sh ] && source ~/dotfiles/env_vars.sh
 export PATH="/usr/local/sbin:$PATH"
+
+# WORKSPACE!
+[ -f ~/dotfiles/transfix/env_vars.sh ] && source ~/dotfiles/transfix/env_vars.sh
+[ -f $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh ] && source $TRANSFIX_HOME/transfix-dev-box/scripts/transfix.sh
 export PATH=$PATH:${TRANSFIX_HOME}/transfix-compose/scripts

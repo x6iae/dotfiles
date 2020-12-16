@@ -100,10 +100,13 @@ FONTS=(
 brew install --cask ${FONTS[@]}
 
 echo "##########----> Installing Python packages..."
+pyenv install 3.7.3
+pyenv global 3.7.3
+
 PYTHON_PACKAGES=(
-    ipython
-    virtualenv
-    virtualenvwrapper
+   ipython
+   virtualenv
+   virtualenvwrapper
 )
 sudo pip install ${PYTHON_PACKAGES[@]}
 
@@ -118,13 +121,6 @@ npm install marked -g
 
 echo "##########----> Installing OhMyZsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Require password as soon as screensaver or sleep mode starts
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# Show filename extensions by default
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 echo "##########----> Creating folder structure..."
 [[ ! -d $HOME/workspace ]] && mkdir $HOME/workspace
