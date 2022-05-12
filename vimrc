@@ -10,7 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'

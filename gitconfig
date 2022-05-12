@@ -8,5 +8,7 @@
   rebase = false
 [pager]
   branch = false
+[push]
+  default = current
 [includeIf "gitdir:~/workspace/"]
   path = ~/.gitconfig-transfix

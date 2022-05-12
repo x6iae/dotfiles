@@ -41,6 +41,16 @@ install_vundle() {
     vim +PluginInstall +qall
 }
 
+# work in progress, switching from vundle to vim-plug:
+# https://github.com/junegunn/vim-plug
+# install_vimPlug() {
+#   data_dir=has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+#   if [ empty(glob(data_dir . '/autoload/plug.vim')) ]
+#     silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+#     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+#   fi
+# }
+
 # add sublime to command to terminal
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 

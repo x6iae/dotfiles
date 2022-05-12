@@ -13,6 +13,10 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # How often to auto-update (in days).
 export UPDATE_ZSH_DAYS=1
 
@@ -47,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  osx
+  macos
 )
 
 # User configuration
@@ -85,8 +89,6 @@ alias get='git '
 
 alias vi='vi -p'
 alias home='cd ~'
-# make pyenv available (already installed via brew-cask in osx_bootstrap.sh)
-eval "$(pyenv init -)"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$HOME/.npm-packages/bin:$PATH" ### Added by the Bluemix CLI
